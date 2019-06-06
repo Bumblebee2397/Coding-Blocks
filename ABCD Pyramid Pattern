@@ -1,0 +1,45 @@
+/*  ABCD Pattern:
+
+    ABCDEEDCBA
+    ABCDDCBA
+    ABCCBA
+    ABBA
+    AA
+*/
+    
+#include <iostream>
+using namespace std;
+int main() {
+    
+    int n;
+
+    cout<<"Enter the number of rows:";
+    cin>>n;
+    int i,j,k,c;
+    char ch='A';
+
+    for(i=1;i<=n;i++){  //switching rows
+
+        for (j=1;j<=(n-i+1);j++){  //for printing ABCDE in the same row
+            cout<<ch;
+            ch++;
+        }
+
+        ch--;
+
+        {
+
+        for (j=1;j<=(n-i+1);j++){ //for printing EDCBA in the same row
+
+            cout<<ch;
+            ch--;
+        }
+        
+        ch='A';       //setting ch to 'A' after each row switch
+        cout<<endl;
+    }
+
+}
+
+    return 0;
+}   
