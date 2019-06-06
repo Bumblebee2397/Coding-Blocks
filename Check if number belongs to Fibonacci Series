@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+int main() {
+    
+    int i=1,n,x=0,y=1,z=x+y;
+    cout<<"Enter a number:";
+    cin>>n;
+
+    if (n==0||n==1||n==2)
+        cout<<"This term occurs in FS";
+    else{
+    while(z<=n){
+            z=x+y;
+            x=y;
+            y=z;
+            if(z==n){
+                cout<<"This term occurs in FS";
+                break;
+            }
+    }
+
+     if(z!=n)
+        cout<<"This term is not in FS";
+}
+    return 0;
+}   
